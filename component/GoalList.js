@@ -5,8 +5,11 @@ const GoalList = ()=>{
           <li>HTML</li>
           <li>CSS</li>
           <li>JS</li>
+          <li>JSX</li>
         </ui>
     )
 }
 
 export default GoalList
+
+
