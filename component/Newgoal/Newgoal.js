@@ -1,17 +1,14 @@
 import React from "react";
 import './Newgoal.css'
-const NewGoal = () => {
-    const goalArray = []
+const NewGoal = props => {
     const addGoalHandler = event => {
         event.preventDefault()
         const newGoal ={
-            Id:Math.random()*"10".toString(),
+            Id:Math.random().toString(),
             text:document.getElementsByTagName('input')[0].value
-        }
 
-        console.log(newGoal)
-        goalArray.push(newGoal)
-        console.log(goalArray)
+        }
+        props.onAddGoal(newGoal)
     }
     return (
         <form class="new-goal" onSubmit={addGoalHandler}>
